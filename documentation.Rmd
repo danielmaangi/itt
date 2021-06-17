@@ -26,7 +26,7 @@ knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
 </style>
 
 # Introduction
-The Indicator Tracking Tool is a simple tool by users for users to inform supply chain decision-making process. The tool draws periodic and aggregated logistic data from the (KHIS, [https://hiskenya.org/](https://hiskenya.org/)) to help analyze and visualize supply chain performance focusing on family planning, immunization, TB and Malaria programs. Using tracer commodities, the tool explores several indicators including reporting rates, data quality, stock status, and stock outs for family planning. For immunization, the tool also analyzes and visualize coverage, and wastage. **Note ** that current year data will be updated daily, however if you have made changes to previous year's data in *KHIS* and would like to see the changes effected, please let us know. Below, we provide a detailed description on how the indicators presented are calculated.
+The Indicator Tracking Tool is a simple tool by users for users to inform supply chain decision-making process. The tool draws periodic and aggregated logistic data from the (KHIS, [https://hiskenya.org/](https://hiskenya.org/)) to help analyze and visualize supply chain performance focusing on family planning, immunization, Malaria and Nutrition programs. Using tracer commodities, the tool explores several indicators including reporting rates, data quality, stock status, and stock outs for family planning. For immunization, the tool also analyzes and visualize coverage, and wastage. **Note ** that current year data will be updated daily, however if you have made changes to previous year's data in *KHIS* and would like to see the changes effected, please let us know. Below, we provide a detailed description on how the indicators presented are calculated.
 
 # Reporting Rate
 
@@ -72,6 +72,26 @@ $$\text{AMC} = \frac{\text{Total consumption for the last 3 months}}{\text{3}}$$
 
 We can then obtain the *Months Of Stock (MOS)* as shown below
 $$\text{MOS} = \frac{\text{Ending Balance}}{\text{AMC}}$$
+
+# Stocked According to Plan (SATP)
+
+### Definition
+This indicator measures percentage of sites with adequate stock levels i.e not understocked or overstocked. The analysis presented here uses the following minimum and maximum criteria:
+
+Family Planning: Min 1 MoS, Max 4 MoS
+Immunization: Min 1 MoS, Max 2 MoS
+Malaria: Min 1 MoS, Max 4 MoS
+Nutrition: Min 1 MoS, Max 4 MoS
+
+### Purpose
+This indicator provides an overall measure of how counties and sub-counties are maintaining adequate stock levels of products every month. It is the proportion of sites with adequate stock level in accordance with the program's min-max criteria.  
+
+### Calculation
+
+The calculation is based on months of stock as follows.
+
+$$\text{SATP(%)} = \frac{\text{Number of sites with adequate stock levels}}{\text{Number of sites reporting to have provided the service}}$$
+
 
 # Stock Out Rate
 
